@@ -1,4 +1,8 @@
 class landingPage {
+    visitURL(){
+        return cy.visit('https://www.vouchercodes.co.uk/');
+
+    }
     signupLoginButton(){
         return  cy.get('[data-qa="el:signUpLogInButton"]');
     }

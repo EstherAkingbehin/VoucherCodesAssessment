@@ -1,9 +1,9 @@
 class signupLoginPage{
 
-getEmailbox(){
+getEmailfeild(){
     return cy.get('[data-qa="el:logInEmail"]')
 }
-getPasswordbox(){
+getPasswordfeild(){
     return cy.get('[data-qa="el:logInPassword"]')
 }
 getLoginButton(){
