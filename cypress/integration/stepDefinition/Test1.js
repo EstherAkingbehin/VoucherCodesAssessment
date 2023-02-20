@@ -1,6 +1,5 @@
 import landingPage from "../pageObejects/landingPage";
 import resturantsPage from "../pageObejects/resturantsPage";
-import enterLandingPage from "../pageObejects/enterLandingPage";
 
 
 
@@ -10,10 +9,10 @@ describe('Search for offers in local resturant in London', function(){
     it('Verify that the user can search for offers in local resturants in london for any given day, for 2 people', function(){
         const LandingPage = new landingPage()
         const ResturantsPage = new resturantsPage()
-        const EnterLandingPage = new enterLandingPage()
+        
         
 
-        EnterLandingPage.enterURL();
+        LandingPage.visitURL();
         LandingPage.getCategory().click();
         LandingPage.getCategoryresturants().click();
         //dynamic dropdown
