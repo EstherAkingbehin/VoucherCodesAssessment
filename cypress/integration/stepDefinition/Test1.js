@@ -1,6 +1,6 @@
 import landingPage from "../pageObejects/landingPage";
 import resturantsPage from "../pageObejects/resturantsPage";
-
+import searchResultPage from "../pageObejects/searchResultPage";
 
 
 
@@ -9,6 +9,7 @@ describe('Search for offers in local resturant in London', function(){
     it('Verify that the user can search for offers in local resturants in london for any given day, for 2 people', function(){
         const LandingPage = new landingPage()
         const ResturantsPage = new resturantsPage()
+        const SearchResultPage = new searchResultPage()
         
         
 
@@ -22,7 +23,7 @@ describe('Search for offers in local resturant in London', function(){
         ResturantsPage.selectAgivenDay().select(1);
         ResturantsPage.selectNumberofPeople().select(3);
         ResturantsPage.getSearch().click();
-        cy.url().should('include', 'restaurant-vouchers/search?');
+        SearchResultPage.getResultPageURL();
 
     })
 }) 
