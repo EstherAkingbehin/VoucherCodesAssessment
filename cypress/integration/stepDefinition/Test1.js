@@ -16,10 +16,8 @@ describe('Search for offers in local resturant in London', function(){
         LandingPage.visitURL();
         LandingPage.getCategory().click();
         LandingPage.getCategoryresturants().click();
-        //dynamic dropdown
         ResturantsPage.enterLocation().type('Lon').wait(300)
         ResturantsPage.selectLocation().eq(0).wait(1000).click({force: true});
-        //static dropdowin
         ResturantsPage.selectAgivenDay().select(1);
         ResturantsPage.selectNumberofPeople().select(3);
         ResturantsPage.getSearch().click();
